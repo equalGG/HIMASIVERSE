@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Proker - SEDINA NING UCIC</title>
+  <script>
+(function() {
+  try {
+    var theme = localStorage.getItem('theme');
+    if (theme === 'light') document.body.classList.add('light-mode');
+    var sidebar = localStorage.getItem('sidebar');
+    if (sidebar === 'close') {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('sidebar')?.classList.add('close');
+      });
+    }
+  } catch(e){}
+})();
+</script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="text/javascript" src="../js/app.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="../img/Himasi.jpeg">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="../img/Himasi.jpeg" alt="Logo HIMASIVERSE" class="logo-img">
+                <span class="logo-text">HIMASIVERSE</span>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html#profil-visi-misi">Profil</a>
+                <a href="index.html#struktur-organisasi">Struktur</a>
+                <a href="index.html#proker-unggulan">Proker</a>
+                <a href="index.html#pengumuman">Pengumuman</a>
+                <a href="https://www.cic.ac.id/">UCIC</a>
+                <a href="https://my.cic.id/portal/mahasiswa/">Portal Akademik</a>
+                <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i> <i class="fas fa-sun"></i>  </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="body-wrapper">
+        <nav id="sidebar">
+            <ul>
+                <li class="sidebar-header">
+                    <img src="img/Febri.JPG" alt="Foto Profil" class="profile-pic">
+                    <div class="profile-info">
+                        <span class="profile-name">Febri Putra</span>
+                        <span class="profile-role">Anggota PNI - Mahasiswa</span>
+                    </div>
+                    <button id="toggle-btn">
+                        </button>
+                </li>
+                <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                <li class="active"><a href="proker.html"><i class="fas fa-rocket"></i><span>Program Kerja</span></a></li>
+                <li><a href="prestasi-karya.html"><i class="fas fa-trophy"></i><span>Prestasi & Karya</span></a></li>
+                <li><a href="diskusi.html"><i class="fas fa-comments"></i><span>Forum Diskusi</span></a></li>
+                <li><a href="kalender.html"><i class="fas fa-calendar-alt"></i><span>Kalender</span></a></li>
+                <li><a href="profile.html"><i class="fas fa-user-circle"></i><span>Profil</span></a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="proker-detail-container">
+                <a href="proker.html" class="back-link"><i class="fas fa-arrow-left"></i> Kembali ke Semua Proker</a>
+
+                <div class="proker-detail-header">
+                    <img src="sedinadatascience.jpg" alt="Seminar Digital" class="proker-detail-img" loading="lazy">
+                    <div class="proker-detail-title">
+                        <h1>SEDINA NING UCIC</h1>
+                        <div class="proker-status status-pengerjaan">Pengerjaan</div>
+                        <p class="proker-detail-date"><i class="fas fa-calendar-alt"></i> Target Pelaksanaan: 25 Agustus 2025</p>
+                    </div>
+                </div>
+
+                <div class="proker-detail-body">
+                    <div class="proker-detail-desc">
+                        <h2>Deskripsi Program Kerja</h2>
+                        <p>Mengadakan seminar berskala nasional dengan pembicara ahli di bidang teknologi untuk meningkatkan wawasan mahasiswa mengenai tren terkini di dunia Data Science dan Artificial Intelligence. Acara ini bertujuan untuk menjembatani dunia akademik dengan industri, memberikan insight praktis, dan membuka peluang networking bagi para peserta.</p>
+                    </div>
+                    <div class="proker-detail-team card">
+                        <h4><i class="fas fa-users"></i> Tim Pelaksana</h4>
+                        <div class="member-item"><img src="https://i.pravatar.cc/40?u=d" alt="Avatar" loading="lazy"><div><strong>Sinsin Kuraesin</strong><br><span>Ketua Pelaksana (Div. Kegiatan)</span></div></div>
+                        <div class="member-item"><img src="https://i.pravatar.cc/40?u=e" alt="Avatar" loading="lazy"><div><strong>Diana Kholifah</strong><br><span>Koordinator Humas (Div. Humas)</span></div></div>
+                        <div class="member-item"><img src="https://i.pravatar.cc/40?u=f" alt="Avatar" loading="lazy"><div><strong>Febri Putra</strong><br><span>Koordinator Teknis (Div. P&I)</span></div></div>
+                        <div class="member-item"><img src="https://i.pravatar.cc/40?u=g" alt="Avatar" loading="lazy"><div><strong>Zhafir Taqi</strong><br><span>Anggota (Div. Kegiatan)</span></div></div>
+                        <div class="member-item"><img src="https://i.pravatar.cc/40?u=h" alt="Avatar" loading="lazy"><div><strong>Oswinaldis A.</strong><br><span>Anggota (Div. Humas)</span></div></div>
+                    </div>
+                </div>
+
+                <div id="progress-tracker" class="progress-tracker-section card">
+                    <h2><i class="fas fa-tasks"></i> Pelacakan Progres</h2>
+                    
+                    <div class="overall-progress">
+                        <span>Progres Keseluruhan</span>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="overall-progress-bar"></div>
+                        </div>
+                        <span class="progress-text" id="overall-progress-text">0%</span>
+                    </div>
+
+                    <div class="division-progress-container">
+                        <div class="division-progress" data-division="kegiatan">
+                            <h4>Divisi Kegiatan</h4>
+                            <div class="progress-bar-container"><div class="progress-bar"></div></div>
+                            <ul class="task-list">
+                                <li class="task-item"><label><input type="checkbox" checked><span>Menentukan tema dan judul seminar</span></label></li>
+                                <li class="task-item"><label><input type="checkbox" checked><span>Menghubungi dan konfirmasi pembicara</span></label></li>
+                                <li class="task-item"><label><input type="checkbox"><span>Menyusun rundown acara</span></label></li>
+                                <li class="task-item"><label><input type="checkbox"><span>Booking venue dan perlengkapan</span></label></li>
+                            </ul>
+                        </div>
+
+                        <div class="division-progress" data-division="humas">
+                            <h4>Divisi Humas & Publikasi</h4>
+                            <div class="progress-bar-container"><div class="progress-bar"></div></div>
+                            <ul class="task-list">
+                                <li class="task-item"><label><input type="checkbox" checked><span>Membuat desain poster dan pamflet</span></label></li>
+                                <li class="task-item"><label><input type="checkbox"><span>Membuka pendaftaran peserta</span></label></li>
+                                <li class="task-item"><label><input type="checkbox"><span>Publikasi di media sosial</span></label></li>
+                                <li class="task-item"><label><input type="checkbox"><span>Menjalin kerjasama media partner</span></label></li>
+                            </ul>
+                        </div>
+
+                        <div class="division-progress" data-division="pni">
+                            <h4>Divisi Pengembangan & Inovasi (Teknis)</h4>
+                            <div class="progress-bar-container"><div class="progress-bar"></div></div>
+                            <ul class="task-list">
+                                <li class="task-item"><label><input type="checkbox" checked><span>Menyiapkan platform live streaming</span></label></li>
+                                <li class="task-item"><label><input type="checkbox"><span>Uji coba teknis audio & video</span></label></li>
+                                <li class="task-item"><label><input type="checkbox"><span>Menyiapkan sistem sertifikat digital</span></label></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Tentang HIMASIVERSE</h4>
+                <p>Platform digital Himpunan Mahasiswa Sistem Informasi untuk berbagi informasi, berkolaborasi, dan berinovasi.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak Organisasi</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Kesambi No.202, Drajat, Kec. Kesambi, Kota Cirebon, Jawa Barat 45133</p>
+                <p><i class="fas fa-envelope"></i> hima.si@cic.ac.id</p>
+            </div>
+            <div class="footer-col">
+                <h4>Media Sosial</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> himasi_ucic</a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i> HIMASI UCIC</a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i> himasi.ucic</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HIMASIVERSE. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

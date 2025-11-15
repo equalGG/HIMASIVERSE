@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIMASIVERSE - Home</title>
+  <script>
+(function() {
+  try {
+    var theme = localStorage.getItem('theme');
+    if (theme === 'light') document.body.classList.add('light-mode');
+    var sidebar = localStorage.getItem('sidebar');
+    if (sidebar === 'close') {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('sidebar')?.classList.add('close');
+      });
+    }
+  } catch(e){}
+})();
+</script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="text/javascript" src="../js/app.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="../img/Himasi.jpeg">
+</head>
+<body>
+
+    <!-- ======================= HEADER BARU ======================= -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="../img/Himasi.jpeg" alt="Logo HIMASIVERSE" class="logo-img">
+                <span class="logo-text">HIMASIVERSE</span>
+            </div>
+            <nav class="header-nav">
+                <a href="#profil-visi-misi">Profil</a>
+                <a href="#struktur-organisasi">Struktur</a>
+                <a href="#proker-unggulan">Proker</a>
+                <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i> <i class="fas fa-sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <!-- ========================================================== -->
+
+    <!-- Wrapper untuk konten yang sudah ada -->
+    <div class="body-wrapper">
+        <!-- Sidebar Navigation (KODE ANDA TIDAK DIUBAH) -->
+        <nav id="sidebar">
+            <ul>
+                <li class="sidebar-header">
+                    <img src="../img/Febri.JPG" alt="Foto Profil" class="profile-pic">
+                    <div class="profile-info">
+                        <span class="profile-name">Febri Putra</span>
+                        <span class="profile-role">Anggota PNI - Mahasiswa</span>
+                    </div>
+                    <button id="toggle-btn">
+                        <!-- Ikon akan diisi oleh JavaScript -->
+                    </button>
+                </li>
+                <li class="active">
+                    <a href="/html/index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/pengumuman.html">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Pengumuman</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/proker.html">
+                        <i class="fas fa-rocket"></i>
+                        <span>Program Kerja</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/prestasi-karya.html">
+                        <i class="fas fa-trophy"></i>
+                        <span>Prestasi & Karya</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/diskusi.html">
+                        <i class="fas fa-comments"></i>
+                        <span>Forum Diskusi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/kalender.html">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Kalender</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/profile.html">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Profil</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content  -->
+        <main>
+            <!-- Hero Section with Slogan -->
+            <section class="hero-section">
+                <h1>Himpunan Mahasiswa Sistem Informasi</h1>
+                <p class="slogan">"Sang Pelopor"</p>
+                <p class="slogan">"Thinking critically solving innovatively"</p>
+            </section>
+
+            <!-- Profile, Visi, Misi Section -->
+            <section id="profil-visi-misi" class="info-grid">
+                <div class="card">
+                    <h2><i class="fas fa-info-circle"></i> Profil Organisasi</h2>
+                    <p>HIMASI adalah wadah bagi mahasiswa Sistem Informasi untuk mengembangkan potensi akademik, non-akademik, dan soft-skills. Kami berkomitmen untuk menciptakan lingkungan yang kolaboratif, inovatif, dan suportif bagi seluruh anggota.</p>
+                </div>
+                <div class="card">
+                    <h2><i class="fas fa-bullseye"></i> Visi</h2>
+                    <p>Mewujudkan HIMASI sebagai rumah besar bagi seluruh mahasiswa untuk mengasah critical thinking dan problem solving dengan penuh kolaborasi.</p>
+                </div>
+                <div class="card">
+                    <h2><i class="fas fa-tasks"></i> Misi</h2>
+                    <ul>
+                        <li>Mengadakan kompetisi inovasi yang menantang mahasiswa untuk menemukan solusi kreatif atas masalah yang ada di kampus atau masyarakat.</li>
+                        <li>Membangun platform digital di mana mahasiswa dapat berbagi ide, menulis artikel, dan berdiskusi tentang topik-topik yang mengasah critical thinking dan problem solving.</li>
+                        <li>Memperkuat dan memoerluas jaringan HIMASI untuk menciptakan ekosistem kolaborasi yang saling mendukung dalam pengembangan kompetensi mahasiswa.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Struktur Organisasi Section -->
+            <section id="struktur-organisasi" class="content-section">
+                <h2 class="section-title"><i class="fas fa-sitemap"></i> Struktur Organisasi Periode 2024-2025</h2>
+                <div class="struktur-grid">
+                    <!-- Card Pimpinan -->
+                    <div class="struktur-card pimpinan">
+                        <h4><i class="fas fa-crown"></i> Pimpinan HIMASI</h4>
+                        <div class="member-item">
+                            <img src="../img/Yohanes.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Yohanes Michael</strong><br><span>Ketua Umum</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Ade.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Ade Silva</strong><br><span>Wakil Ketua Umum</span></div>
+                        </div>
+                    </div>
+                     <!-- Card Penasehat -->
+                    <div class="struktur-card">
+                        <h4><i class="fas fa-gavel"></i> Dewan Penasehat</h4>
+                         <div class="member-item">
+                            <img src="../img/Shalom.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Shalom Christviona</strong><br><span>Dewan Penasehat</span></div>
+                        </div>
+                    </div>
+                    <!-- Card Sekretaris & Bendahara -->
+                    <div class="struktur-card">
+                        <h4><i class="fas fa-file-signature"></i> Sekretaris</h4>
+                        <div class="member-item">
+                            <img src="../img/Ariyani.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Ariyani Mutiah</strong><br><span>Sekretaris I</span></div>
+                            <img src="../img/Shella.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Shella Mita</strong><br><span>Sekretaris II</span></div>
+                        </div>
+                    </div>
+                    <div class="struktur-card">
+                        <h4><i class="fas fa-wallet"></i> Bendahara</h4>
+                        <div class="member-item">
+                            <img src="../img/Felicia.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Felicia Linggayani</strong><br><span>Bendahara I</span></div>
+                            <img src="../img/Conita.jpg" alt="Avatar" loading="lazy">
+                            <div><strong>Conita Silvania</strong><br><span>Bendahara II</span></div>
+                        </div>
+                    </div>
+                    <!-- Card Divisi -->
+                    <div class="struktur-card">
+                        <h4><i class="fas fa-bullhorn"></i> Humas</h4>
+                        <div class="member-item">
+                            <img src="../img/Diana.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Diana Kholifah</strong><br><span>Ketua Divisi</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Tia.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Oswinaldis Agustiana</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Vincent.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Vincentius Frederico</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Jonathan.jpg" alt="Avatar" loading="lazy">
+                            <div><strong>Jonathan Wijaya</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Shasa.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Shasa Alicia</strong><br><span>Anggota</span></div>
+                        </div>
+                    </div>
+                    <div class="struktur-card">
+                        <h4><i class="fas fa-cogs"></i> Kegiatan</h4>
+                        <div class="member-item">
+                            <img src="../img/Sinsin.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Sinsin Kuraesin</strong><br><span>Ketua Divisi</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Zhafir.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Zhafir Taqi</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Sheva.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Sheva Ardhan</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Alexander.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Alexander Winur</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Suci.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Suci Nurpatimah</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Gabrielle.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Gabrielle Apta</strong><br><span>Anggota</span></div>
+                        </div>
+                    </div>
+                    <div class="struktur-card">
+                        <h4><i class="fas fa-hands-helping"></i> Sosial</h4>
+                        <div class="member-item">
+                            <img src="../img/Tiar.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Ichtiari Dayaguna</strong><br><span>Ketua Divisi</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Aulia.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Syavira Aulia</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Rama.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Rama Wijaya</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Rai" alt="Avatar" loading="lazy">
+                            <div><strong>Khumairoh Ratna</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Belfa.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Belfania Priandini</strong><br><span>Anggota</span></div>
+                        </div>
+                    </div>
+                    <div class="struktur-card">
+                        <h4><i class="fas fa-lightbulb"></i> Pengembangan & Inovasi</h4>
+                        <div class="member-item">
+                            <img src="../img/Fernando.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Fernando Valentino</strong><br><span>Ketua Divisi</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Febri.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Febri Putra Ananda</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Jonathan.jpg" alt="Avatar" loading="lazy">
+                            <div><strong>Jonathan Julian</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Zahrina.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Zahrina Nurpuriani</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Abdan.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Abdan Syakur</strong><br><span>Anggota</span></div>
+                        </div>
+                    </div>
+                    <div class="struktur-card">
+                        <h4><i class="fas fa-photo-video"></i> Media & Komunikasi</h4>
+                        <div class="member-item">
+                            <img src="../img/Dara.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Intan Widara</strong><br><span>Ketua Divisi</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Prima.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Prima Septian</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Aulia.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Aulia Nur</strong><br><span>Anggota</span></div>
+                        </div>
+                        <div class="member-item">
+                            <img src="../img/Alif.JPG" alt="Avatar" loading="lazy">
+                            <div><strong>Alif Putra</strong><br><span>Anggota</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Proker Unggulan Section -->
+            <div id="proker-unggulan" class="content-section">
+                <h2 class="section-title"><i class="fas fa-rocket"></i> Program Kerja Unggulan</h2>
+                <div class="proker-unggulan-list">
+                    <div class="proker-unggulan-item card">
+                        <img src="../#" alt="Siberkom" class="proker-unggulan-img-item">
+                        <div>
+                            <h5>Siberkom</h5>
+                            <p>Siberkom</p>
+                        </div>
+                    </div>
+                    <div class="proker-unggulan-item card">
+                        <img src="../#" alt="Sibermas" class="proker-unggulan-img-item">
+                        <div>
+                            <h5>Sibermas</h5>
+                            <p>Sibermas</p>
+                        </div>
+                    </div>
+                    <div class="proker-unggulan-item card">
+                        <img src="../#" alt="Sikrit" class="proker-unggulan-img-item">
+                        <div>
+                            <h5>Sikrit</h5>
+                            <p>Sikrit</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ======================= FOOTER BARU ======================= -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Tentang HIMASIVERSE</h4>
+                <p>Platform digital Himpunan Mahasiswa Sistem Informasi untuk berbagi informasi, berkolaborasi, dan berinovasi.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak Organisasi</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Kesambi No.202, Drajat, Kec. Kesambi, Kota Cirebon, Jawa Barat 45133</p>
+                <p><i class="fas fa-envelope"></i> hima.si@cic.ac.id</p>
+            </div>
+            <div class="footer-col">
+                <h4>Media Sosial</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> himasi_ucic</a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i> HIMASI UCIC</a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i> himasi.ucic</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HIMASIVERSE. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- ========================================================== -->
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIMASI - Program Kerja</title>
+  <script>
+(function() {
+  try {
+    var theme = localStorage.getItem('theme');
+    if (theme === 'light') document.body.classList.add('light-mode');
+    var sidebar = localStorage.getItem('sidebar');
+    if (sidebar === 'close') {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('sidebar')?.classList.add('close');
+      });
+    }
+  } catch(e){}
+})();
+</script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="text/javascript" defer src="../js/app.js"></script>
+  <script type="text/javascript" defer src="../js/srtsrc.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="../img/Himasi.jpeg">
+</head>
+<body>
+    <!-- ======================= HEADER ======================= -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="../img/Himasi.jpeg" alt="Logo HIMASIVERSE" class="logo-img">
+                <span class="logo-text">HIMASIVERSE</span>
+            </div>
+            <nav class="header-nav">
+                <a href="#proker-page-header">Proker</a>
+                <a href="#filter-container">Filter</a>
+                <a href="#proker-grid">Daftar Proker</a>
+                <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i> <i class="fas fa-sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Wrapper untuk konten -->
+    <div class="body-wrapper">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar">
+            <ul>
+                <li class="sidebar-header">
+                    <img src="../img/Febri.JPG" alt="Foto Profil" class="profile-pic">
+                    <div class="profile-info">
+                        <span class="profile-name">Febri Putra</span>
+                        <span class="profile-role">Anggota PNI - Mahasiswa</span>
+                    </div>
+                    <button id="toggle-btn"></button>
+                </li>
+                <li><a href="/html/index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                <li><a href="/html/pengumuman.html"><i class="fas fa-bullhorn"></i><span>Pengumuman</span></a></li>
+                <li class="active"><a href="/html/proker.html"><i class="fas fa-rocket"></i><span>Program Kerja</span></a></li>
+                <li><a href="/html/prestasi-karya.html"><i class="fas fa-trophy"></i><span>Prestasi & Karya</span></a></li>
+                <li><a href="/html/diskusi.html"><i class="fas fa-comments"></i><span>Forum Diskusi</span></a></li>
+                <li><a href="/html/kalender.html"><i class="fas fa-calendar-alt"></i><span>Kalender</span></a></li>
+                <li><a href="/html/profile.html"><i class="fas fa-user-circle"></i><span>Profil</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <div class="proker-page-header" id="proker-page-header">
+                <h1>Program Kerja HIMASI</h1>
+                <p class="tagline">Daftar proyek dan inisiatif untuk kemajuan bersama.</p>
+            </div>
+
+            <!-- Filter and Search -->
+            <div class="filter-container" id="filter-container">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Cari program kerja...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="semua">Semua</button>
+                    <button class="filter-btn" data-filter="selesai">Selesai</button>
+                    <button class="filter-btn" data-filter="pengerjaan">Pengerjaan</button>
+                    <button class="filter-btn" data-filter="perencanaan">Perencanaan</button>
+                </div>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="proker-grid" id="proker-grid">
+                <!-- Project Card 1: Selesai - MBKM Karyamulya -->
+                <div class="proker-card status-selesai" data-status="selesai">
+                    <img src="../img/MBKM.JPG" alt="MBKM Karyamulya" class="proker-img" loading="lazy">
+                    <div class="proker-content">
+                        <div class="proker-header">
+                            <h3>MBKM Karyamulya</h3>
+                            <div class="proker-status">Selesai</div>
+                        </div>
+                        <div class="proker-meta">
+                            <span class="proker-date"><i class="fas fa-calendar-alt"></i> Feb 2025</span>
+                        </div>
+                        <div class="proker-desc">
+                            Kegiatan sosial HIMASI untuk mendukung UMKM di Kelurahan Karyamulya, Kota Cirebon melalui program MBKM.
+                        </div>
+                        <div class="proker-footer">
+                            <div class="proker-team">
+                                <span>Tim:</span>
+                                <img src="https://i.pravatar.cc/24?u=mbkm1" alt="Avatar">
+                                <img src="https://i.pravatar.cc/24?u=mbkm2" alt="Avatar">
+                            </div>
+                            <a href="proker-detail.html" class="proker-details-btn">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2: Selesai - Charity & Bukber SI -->
+                <div class="proker-card status-selesai" data-status="selesai">
+                    <img src="../img/care.png" alt="Charity & Bukber SI" class="proker-img" loading="lazy">
+                    <div class="proker-content">
+                        <div class="proker-header">
+                            <h3>Charity & Bukber SI</h3>
+                            <div class="proker-status">Selesai</div>
+                        </div>
+                        <div class="proker-meta">
+                            <span class="proker-date"><i class="fas fa-calendar-alt"></i> Apr 2025</span>
+                        </div>
+                        <div class="proker-desc">
+                            Kegiatan sosial berbagi dan buka puasa bersama mahasiswa Sistem Informasi dan masyarakat sekitar melalui program HIMASI Care.
+                        </div>
+                        <div class="proker-footer">
+                            <div class="proker-team">
+                                <span>Tim:</span>
+                                <img src="https://i.pravatar.cc/24?u=care1" alt="Avatar">
+                                <img src="https://i.pravatar.cc/24?u=care2" alt="Avatar">
+                            </div>
+                            <a href="proker-detail.html" class="proker-details-btn">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3: Selesai - SIBOOK -->
+                <div class="proker-card status-selesai" data-status="selesai">
+                    <img src="../img/SIBOOK.JPG" alt="SIBOOK Project" class="proker-img" loading="lazy">
+                    <div class="proker-content">
+                        <div class="proker-header">
+                            <h3>SIBOOK (Sistem Informasi Membaca Buku)</h3>
+                            <div class="proker-status">Selesai</div>
+                        </div>
+                        <div class="proker-meta">
+                            <span class="proker-date"><i class="fas fa-calendar-alt"></i> Jan 2024 - Apr 2024</span>
+                        </div>
+                        <div class="proker-desc">
+                            Platform digital untuk memudahkan mahasiswa dan dosen dalam melakukan pemesanan ruangan kelas dan fasilitas kampus secara online, meningkatkan efisiensi penggunaan sumber daya.
+                        </div>
+                        <div class="proker-footer">
+                            <div class="proker-team">
+                                <span>Tim:</span>
+                                <img src="https://i.pravatar.cc/24?u=a" alt="Avatar">
+                                <img src="https://i.pravatar.cc/24?u=b" alt="Avatar">
+                                <img src="https://i.pravatar.cc/24?u=c" alt="Avatar">
+                            </div>
+                            <a href="proker-detail.html" class="proker-details-btn">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 4: Pengerjaan - Sedina Ning UCIC -->
+                <div class="proker-card status-pengerjaan" data-status="pengerjaan">
+                    <img src="../img/Sedinadatascience.jpg" alt="Sedina Ning UCIC" class="proker-img" loading="lazy">
+                    <div class="proker-content">
+                        <div class="proker-header">
+                            <h3>SEDINA NING UCIC</h3>
+                            <div class="proker-status">Pengerjaan</div>
+                        </div>
+                        <div class="proker-meta">
+                            <span class="proker-date"><i class="fas fa-calendar-alt"></i> Target: 12 Juli 2025</span>
+                        </div>
+                        <div class="proker-desc">
+                            Seminar nasional bertema Data Science dan teknologi terbaru, menghadirkan pembicara ahli dan memperluas jejaring mahasiswa Sistem Informasi.
+                        </div>
+                        <div class="proker-footer">
+                            <div class="proker-team">
+                                <span>Tim:</span>
+                                <img src="https://i.pravatar.cc/24?u=sedina1" alt="Avatar">
+                                <img src="https://i.pravatar.cc/24?u=sedina2" alt="Avatar">
+                            </div>
+                            <a href="proker-sedina-detail.html" class="proker-details-btn">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 5: Perencanaan - MELT -->
+                <div class="proker-card status-perencanaan" data-status="perencanaan">
+                    <img src="../img/simelt.jpg" alt="SIMELT" class="proker-img" loading="lazy">
+                    <div class="proker-content">
+                        <div class="proker-header">
+                            <h3>SIMELT (Sistem Informasi Mental Health)</h3>
+                            <div class="proker-status">Perencanaan</div>
+                        </div>
+                        <div class="proker-meta">
+                            <span class="proker-date"><i class="fas fa-calendar-alt"></i>2025</span>
+                        </div>
+                        <div class="proker-desc">
+                            Program mentoring dan belajar bersama untuk mengenali diri sendiri dan menghadapi stress.
+                        </div>
+                        <div class="proker-footer">
+                            <div class="proker-team">
+                                <span>Tim:</span>
+                                <img src="https://i.pravatar.cc/24?u=melt1" alt="Avatar">
+                                <img src="https://i.pravatar.cc/24?u=melt2" alt="Avatar">
+                            </div>
+                            <a href="proker-detail.html" class="proker-details-btn">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+<script>
+
+//PROKER//
+
+let allProkerData = [];  // Simpan semua data HTML + atribut asli
+
+// Ambil data awal saat halaman dimuat
+function initProkerData() {
+    const cards = Array.from(document.querySelectorAll('.proker-card'));
+    allProkerData = cards.map(card => ({
+        name: card.querySelector('h3').textContent.trim(),
+        desc: card.querySelector('.proker-desc').textContent.trim(),
+        status: card.dataset.status,
+        date: card.dataset.date || "",
+        html: card.outerHTML
+    }));
+}
+
+// Fungsi utama filter + sort
+async function filterAndSortProker() {
+    const searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
+    const activeFilter = document.querySelector(".filter-btn.active").dataset.filter;
+
+    const response = await fetch('/run-python', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            data: allProkerData,
+            search: searchTerm,
+            sort: "name"
+        })
+    });
+
+    const filtered = await response.json();
+
+    const container = document.getElementById("proker-grid");
+    container.innerHTML = "";
+
+    filtered.forEach(item => {
+        if (activeFilter === "semua" || item.status === activeFilter) {
+            const temp = document.createElement("div");
+            temp.innerHTML = item.html;
+            container.appendChild(temp.firstChild);
+        }
+    });
+}
+
+// Inisialisasi saat halaman siap
+document.addEventListener("DOMContentLoaded", () => {
+    initProkerData();         // Simpan semua proker awal
+    filterAndSortProker();    // Render pertama
+});
+
+// Event listeners pencarian dan filter
+document.getElementById('searchInput').addEventListener('input', filterAndSortProker);
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelector('.filter-btn.active').classList.remove('active');
+        btn.classList.add('active');
+        filterAndSortProker();
+    });
+});
+</script>
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Tentang HIMASIVERSE</h4>
+                <p>Platform digital Himpunan Mahasiswa Sistem Informasi.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak Organisasi</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Kesambi No.202</p>
+                <p><i class="fas fa-envelope"></i> hima.si@cic.ac.id</p>
+            </div>
+            <div class="footer-col">
+                <h4>Media Sosial</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i> himasi_ucic</a>
+                    <a href="#"><i class="fab fa-youtube"></i> HIMASI UCIC</a>
+                    <a href="#"><i class="fab fa-tiktok"></i> himasi.ucic</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HIMASIVERSE. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

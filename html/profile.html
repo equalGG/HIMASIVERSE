@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIMASIVERSE - Profil Akun</title>
+  <script>
+(function() {
+  try {
+    var theme = localStorage.getItem('theme');
+    if (theme === 'light') document.body.classList.add('light-mode');
+    var sidebar = localStorage.getItem('sidebar');
+    if (sidebar === 'close') {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('sidebar')?.classList.add('close');
+      });
+    }
+  } catch(e){}
+})();
+</script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="text/javascript" src="../../js/app.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="../img/Himasi.jpeg">
+</head>
+<body>
+    <!-- ======================= HEADER ======================= -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="../img/Himasi.jpeg" alt="Logo HIMASIVERSE" class="logo-img">
+                <span class="logo-text">HIMASIVERSE</span>
+            </div>
+            <nav class="header-nav">
+                <a href="#profile-main">Profil</a>
+                <a href="#profile-details-card">Informasi</a>
+                <a href="#profile-activity-card">Aktivitas</a>
+                <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i> <i class="fas fa-sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <!-- ========================================================== -->
+
+    <!-- Wrapper untuk konten -->
+    <div class="body-wrapper">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar">
+            <ul>
+                <li class="sidebar-header">
+                    <img src="../img/Febri.JPG" alt="Foto Profil" class="profile-pic" loading="lazy">
+                    <div class="profile-info">
+                        <span class="profile-name">Febri Putra</span>
+                        <span class="profile-role">Anggota PNI - Mahasiswa</span>
+                    </div>
+                    <button id="toggle-btn">
+                        <!-- Ikon akan diisi oleh JavaScript -->
+                    </button>
+                </li>
+                <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                <li><a href="pengumuman.html"><i class="fas fa-bullhorn"></i><span>Pengumuman</span></a></li>
+                <li><a href="proker.html"><i class="fas fa-rocket"></i><span>Program Kerja</span></a></li>
+                <li><a href="prestasi-karya.html"><i class="fas fa-trophy"></i><span>Prestasi & Karya</span></a></li>
+                <li><a href="diskusi.html"><i class="fas fa-comments"></i><span>Forum Diskusi</span></a></li>
+                <li><a href="kalender.html"><i class="fas fa-calendar-alt"></i><span>Kalender</span></a></li>
+                <li class="active"><a href="profile.html"><i class="fas fa-user-circle"></i><span>Profil</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="profile-main" id="profile-main">
+            <div class="profile-grid">
+                <!-- Kolom Kiri: Kartu Identitas Profil -->
+                <div class="profile-identity-card card">
+                    <div class="profile-banner"></div>
+                    <img src="../img/Febri.JPG" alt="Avatar" class="profile-avatar" loading="lazy">
+                    <div class="profile-identity-info">
+                        <h2>Febri Putra Ananda</h2>
+                        <p>Anggota Divisi Pengembangan & Inovasi</p>
+                        <span class="profile-status"><i class="fas fa-circle"></i> Aktif</span>
+                    </div>
+                    <div class="profile-social-links">
+                        <a href="#" title="Website"><i class="fas fa-globe"></i></a>
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <button class="edit-profile-btn">Edit Profil</button>
+                </div>
+
+                <!-- Kolom Kanan: Detail dan Aktivitas -->
+                <div class="profile-content-area">
+                    <!-- Kartu Detail Informasi -->
+                    <div class="profile-details-card card" id="profile-details-card">
+                        <h3 class="profile-section-title">Informasi Detail</h3>
+                        <table class="profile-details-table">
+                            <tbody>
+                                <tr><td><strong>Nama Lengkap</strong></td><td>: Febri Putra Ananda</td></tr>
+                                <tr><td><strong>NIM</strong></td><td>: 20241030019</td></tr>
+                                <tr><td><strong>Prodi</strong></td><td>: Sistem Informasi</td></tr>
+                                <tr><td><strong>Email</strong></td><td>: febri.putra.si@cic.id</td></tr>
+                                <tr><td><strong>Kontak</strong></td><td>: +62 857-2420-1325</td></tr>
+                                <tr><td><strong>Universitas</strong></td><td>: Universitas Catur Insan Cendekia</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Kartu Aktivitas Terbaru -->
+                    <div class="profile-activity-card card" id="profile-activity-card">
+                        <h3 class="profile-section-title">Aktivitas Terbaru</h3>
+                        <div class="activity-feed">
+                            <div class="activity-item">
+                                <i class="fas fa-comment-dots activity-icon"></i>
+                                <div class="activity-info">
+                                    <p>Membuat postingan di forum diskusi: <strong>"Apa ide anda untuk membuat HIMASI lebih baik"</strong></p>
+                                    <span class="activity-time">2 hari yang lalu</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <i class="fas fa-check-circle activity-icon"></i>
+                                <div class="activity-info">
+                                    <p>Menyelesaikan tugas <strong>"Menyiapkan platform live streaming"</strong> pada proker SEDINA NING UCIC.</p>
+                                    <span class="activity-time">5 hari yang lalu</span>
+                                </div>
+                            </div>
+                             <div class="activity-item">
+                                <i class="fas fa-trophy activity-icon"></i>
+                                <div class="activity-info">
+                                    <p>Mengunggah karya baru: <strong>"Pengembangan Website Portofolio HIMASI"</strong></p>
+                                    <span class="activity-time">1 bulan yang lalu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Tentang HIMASIVERSE</h4>
+                <p>Platform digital Himpunan Mahasiswa Sistem Informasi untuk berbagi informasi, berkolaborasi, dan berinovasi.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak Organisasi</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Kesambi No.202, Drajat, Kec. Kesambi, Kota Cirebon, Jawa Barat 45133</p>
+                <p><i class="fas fa-envelope"></i> hima.si@cic.ac.id</p>
+            </div>
+            <div class="footer-col">
+                <h4>Media Sosial</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> himasi_ucic</a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i> HIMASI UCIC</a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i> himasi.ucic</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HIMASIVERSE. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- ========================================================== -->
+</body>
+</html>
+</body>
+</html>
