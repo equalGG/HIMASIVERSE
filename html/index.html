@@ -352,5 +352,120 @@
     </footer>
     <!-- ========================================================== -->
 
+        <!-- Demo Content -->
+    <div class="demo-content">
+     
+    </div>
+
+    <!-- Chat Bubble Button -->
+    <div class="chat-bubble" id="chatBubble">
+        <img src="zyrruidle.png" alt="AI Assistant">
+    </div>
+
+    <!-- Chat Popup -->
+    <div class="chat-popup" id="chatPopup">
+        <!-- Close Button -->
+        <button class="close-btn" id="closeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+
+        <!-- AI Avatar at Top Center -->
+        <div class="chat-avatar">
+            <img src="zyrrusmile.png" alt="AI Assistant">
+            <div class="chat-avatar-info">
+                <h3>Zyrru</h3>
+                <div class="status">● Online</div>
+            </div>
+        </div>
+
+        <!-- Chat Content -->
+        <div class="chat-content">
+            <!-- Header (Blue Line) -->
+            <div class="chat-header"></div>
+
+            <!-- Messages -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="message ai">
+                    <div class="message-bubble">
+                        Halo! 👋 Aku Zyrru. Apa ada yang bisa kubantu?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input -->
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Ketik pesan Anda...">
+                <button class="send-btn" id="sendBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const chatBubble = document.getElementById('chatBubble');
+        const chatPopup = document.getElementById('chatPopup');
+        const closeBtn = document.getElementById('closeBtn');
+        const sendBtn = document.getElementById('sendBtn');
+        const chatInput = document.getElementById('chatInput');
+        const chatMessages = document.getElementById('chatMessages');
+
+        // Open chat
+        chatBubble.addEventListener('click', () => {
+            chatPopup.classList.add('active');
+            chatBubble.classList.add('hidden');
+            chatInput.focus();
+        });
+
+        // Close chat
+        closeBtn.addEventListener('click', () => {
+            chatPopup.classList.remove('active');
+            chatBubble.classList.remove('hidden');
+        });
+
+        // Send message
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (message === '') return;
+
+            // Add user message
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user';
+            userMessage.innerHTML = `<div class="message-bubble">${message}</div>`;
+            chatMessages.appendChild(userMessage);
+
+            // Clear input
+            chatInput.value = '';
+
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // Simulate AI response
+            setTimeout(() => {
+                const aiMessage = document.createElement('div');
+                aiMessage.className = 'message ai';
+                aiMessage.innerHTML = `<div class="message-bubble">Hai! Aku Zyrru, siap membantu Anda!</div>`;
+                chatMessages.appendChild(aiMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+        }
+
+        // Send on button click
+        sendBtn.addEventListener('click', sendMessage);
+
+        // Send on Enter key
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+
 </body>
 </html>
