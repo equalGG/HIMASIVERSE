@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIMASIVERSE - Prestasi & Karya</title>
+  <script>
+(function() {
+  try {
+    var theme = localStorage.getItem('theme');
+    if (theme === 'light') document.body.classList.add('light-mode');
+    var sidebar = localStorage.getItem('sidebar');
+    if (sidebar === 'close') {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('sidebar')?.classList.add('close');
+      });
+    }
+  } catch(e){}
+})();
+</script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="text/javascript" src="../js/app.js" defer></script>
+  <script defer src="../js/srtsrc.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="../img/Himasi.jpeg">
+</head>
+<body>
+
+    <!-- ======================= HEADER ======================= -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="../img/Himasi.jpeg" alt="Logo HIMASIVERSE" class="logo-img">
+                <span class="logo-text">HIMASIVERSE</span>
+            </div>
+            <nav class="header-nav">
+                <a href="#gallery-page-header">Prestasi & Karya</a>
+                <a href="#gallery-filter-container">Filter</a>
+                <a href="#gallery-grid">Galeri</a>
+                <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i> <i class="fas fa-sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <!-- ========================================================== -->
+
+    <!-- Wrapper untuk konten -->
+    <div class="body-wrapper">
+        <!-- Sidebar Navigation (Struktur tidak diubah) -->
+        <nav id="sidebar">
+            <ul>
+                <li class="sidebar-header">
+                    <img src="../img/Febri.JPG" alt="Foto Profil" class="profile-pic">
+                    <div class="profile-info">
+                        <span class="profile-name">Febri Putra</span>
+                        <span class="profile-role">Anggota PNI - Mahasiswa</span>
+                    </div>
+                    <button id="toggle-btn">
+                        <!-- Ikon akan diisi oleh JavaScript -->
+                    </button>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pengumuman.html">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Pengumuman</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="proker.html">
+                        <i class="fas fa-rocket"></i>
+                        <span>Program Kerja</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="prestasi-karya.html">
+                        <i class="fas fa-trophy"></i>
+                        <span>Prestasi & Karya</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="diskusi.html">
+                        <i class="fas fa-comments"></i>
+                        <span>Forum Diskusi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="kalender.html">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Kalender</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Profil</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+<main>
+    <section class="gallery-page-header" id="gallery-page-header">
+        <h1>Galeri Prestasi & Karya</h1>
+        <p class="tagline">Etalase pencapaian dan inovasi organisasi HIMASI dan mahasiswa Sistem Informasi.</p>
+    </section>
+
+    <!-- Filter and Search Controls -->
+    <div class="gallery-filter-container" id="gallery-filter-container">
+        <div class="gallery-search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="gallerySearchInput" placeholder="Cari berdasarkan judul atau nama...">
+        </div>
+        <div class="gallery-filter-buttons">
+            <button class="filter-btn active" data-filter="semua">Semua</button>
+            <button class="filter-btn" data-filter="Prestasi HIMASI">Prestasi HIMASI</button>
+            <button class="filter-btn" data-filter="Karya HIMASI">Karya HIMASI</button>
+            <button class="filter-btn" data-filter="Prestasi Mahasiswa">Prestasi Mahasiswa</button>
+            <button class="filter-btn" data-filter="Karya Mahasiswa">Karya Mahasiswa</button>
+        </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid" id="gallery-grid">
+                <!-- 1. Penghargaan (Prestasi HIMASI) -->
+                <div class="gallery-card" data-category="Prestasi HIMASI">
+                    <div class="gallery-card-img-container">
+                        <img src="../img/Sertifhimasi.png" alt="Sertif Himasi" class="gallery-card-img" loading="lazy">
+                        <span class="gallery-card-category">Prestasi HIMASI</span>
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">Penghargaan Himpunan Mahasiswa terfavorit pada acara CIC Choice Awards.</h3>
+                        <p class="gallery-card-author">oleh Organisasi "HIMASI"</p>
+                        <div class="gallery-card-footer">
+                            <span class="gallery-card-date"><i class="fas fa-calendar-alt"></i> Januari 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Website (Karya Mahasiswa) -->
+                <div class="gallery-card" data-category="Karya Mahasiswa">
+                    <div class="gallery-card-img-container">
+                        <img src="../img/webhimasiverse.png" alt="Web HIMASI" class="gallery-card-img" loading="lazy">
+                        <span class="gallery-card-category">Karya Mahasiswa</span>
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">Website Sistem Informasi Manajemen Organisasi "HIMASIVERSE"</h3>
+                        <p class="gallery-card-author">oleh Febri, Rama, Prima</p>
+                        <div class="gallery-card-footer">
+                            <span class="gallery-card-date"><i class="fas fa-calendar-alt"></i> Juli 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Akreditasi (Prestasi HIMASI) -->
+                <div class="gallery-card" data-category="Prestasi HIMASI">
+                    <div class="gallery-card-img-container">
+                        <img src="../img/Akreditasi.JPG" alt="Akreditasi SI" class="gallery-card-img" loading="lazy">
+                        <span class="gallery-card-category">Prestasi HIMASI</span>
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">Akreditasi "BAIK SEKALI" Prodi Sistem Informasi UCIC</h3>
+                        <p class="gallery-card-author">oleh HIMASI & Prodi SI UCIC</p>
+                        <div class="gallery-card-footer">
+                            <span class="gallery-card-date"><i class="fas fa-calendar-alt"></i> Januari 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. MBKM Karyamulya (Karya HIMASI) -->
+                <div class="gallery-card" data-category="Karya HIMASI">
+                    <div class="gallery-card-img-container">
+                        <img src="../img/MBKM.JPG" alt="MBKM Karyamulya" class="gallery-card-img" loading="lazy">
+                        <span class="gallery-card-category">Karya HIMASI</span>
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">MBKM HIMASI mengembangkan UMKM daerah Karyamulya</h3>
+                        <p class="gallery-card-author">oleh HIMASI UCIC</p>
+                        <div class="gallery-card-footer">
+                            <span class="gallery-card-date"><i class="fas fa-calendar-alt"></i> Februari 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. HIFEST (Karya HIMASI) -->
+                <div class="gallery-card" data-category="Karya HIMASI">
+                    <div class="gallery-card-img-container">
+                        <img src="../img/HIFEST2022.png" alt="HIFEST 2022" class="gallery-card-img" loading="lazy">
+                        <span class="gallery-card-category">Karya HIMASI</span>
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">HIFEST 2022: Ajang Unjuk Gigi Akademik & Mobile Legend</h3>
+                        <p class="gallery-card-author">oleh HIMASI UCIC</p>
+                        <div class="gallery-card-footer">
+                            <span class="gallery-card-date"><i class="fas fa-calendar-alt"></i> 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. KEMAS (Karya HIMASI) -->
+                <div class="gallery-card" data-category="Karya HIMASI">
+                    <div class="gallery-card-img-container">
+                        <img src="../img/Kemas.png" alt="KEMAS Open Class" class="gallery-card-img" loading="lazy">
+                        <span class="gallery-card-category">Karya HIMASI</span>
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">KEMAS (Open Class): Belajar Bersama Pemrograman</h3>
+                        <p class="gallery-card-author">oleh HIMASI UCIC</p>
+                        <div class="gallery-card-footer">
+                            <span class="gallery-card-date"><i class="fas fa-calendar-alt"></i> 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. CKD (Karya HIMASI) -->
+                <div class="gallery-card" data-category="Karya HIMASI">
+                    <div class="gallery-card-img-container">
+                        <img src="../img/ckd.png" alt="Cirebon Kartini Day" class="gallery-card-img" loading="lazy">
+                        <span class="gallery-card-category">Karya HIMASI</span>
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">Cirebon Kartini Day 2024</h3>
+                        <p class="gallery-card-author">oleh HIMASI UCIC</p>
+                        <div class="gallery-card-footer">
+                            <span class="gallery-card-date"><i class="fas fa-calendar-alt"></i> April 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. HIMASI Care (Karya HIMASI) -->
+                <div class="gallery-card" data-category="Karya HIMASI">
+                    <div class="gallery-card-img-container">
+                        <img src="../img/care.png" alt="HIMASI Care" class="gallery-card-img" loading="lazy">
+                        <span class="gallery-card-category">Karya HIMASI</span>
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">HIMASI Care: Berbagi Kepada Masyarakat</h3>
+                        <p class="gallery-card-author">oleh HIMASI UCIC</p>
+                        <div class="gallery-card-footer">
+                            <span class="gallery-card-date"><i class="fas fa-calendar-alt"></i> 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Kurma (Karya HIMASI) -->
+                <div class="gallery-card" data-category="Karya HIMASI">
+                    <div class="gallery-card-img-container">
+                        <img src="../img/kurma.png" alt="Kurma Ramadhan" class="gallery-card-img" loading="lazy">
+                        <span class="gallery-card-category">Karya HIMASI</span>
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">Kurma (Kultum Ramadhan) HIMASI</h3>
+                        <p class="gallery-card-author">oleh HIMASI UCIC</p>
+                        <div class="gallery-card-footer">
+                            <span class="gallery-card-date"><i class="fas fa-calendar-alt"></i> Ramadhan 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. SIDAK (Karya HIMASI) -->
+                <div class="gallery-card" data-category="Karya HIMASI">
+                    <div class="gallery-card-img-container">
+                        <img src="../img/sidak.png" alt="SIDAK" class="gallery-card-img" loading="lazy">
+                        <span class="gallery-card-category">Karya HIMASI</span>
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">SIDAK: Si Dadakan Konten Interview Mahasiswa</h3>
+                        <p class="gallery-card-author">oleh HIMASI UCIC</p>
+                        <div class="gallery-card-footer">
+                            <span class="gallery-card-date"><i class="fas fa-calendar-alt"></i> 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+<script>
+// ================= PRESTASI-KARYA ================= //
+let allKaryaData = [];  // Simpan semua data HTML + atribut asli
+
+function initKaryaData() {
+    const cards = Array.from(document.querySelectorAll('.gallery-card')); //JS mengambil semua data dari HTML//
+    allKaryaData = cards.map(card => ({
+        name: card.querySelector('h3')?.textContent.trim() || "",  
+        author: card.querySelector('.gallery-card-author')?.textContent.trim() || "",
+        category: card.dataset.category || "",
+        html: card.outerHTML
+    }));
+}
+
+// Fungsi utama filter + sort via Python
+async function filterAndSortKarya() {
+    const searchTerm = document.getElementById("gallerySearchInput").value.trim().toLowerCase();
+    const activeFilter = document.querySelector(".filter-btn.active").dataset.filter;
+
+    //JS mengirim data ke Python//
+    const response = await fetch('/run-python', {
+        method: 'POST', //Mengirim data//
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ //JSON.stringify untuk mengubah data menjadi format JSON//
+            data: allKaryaData,
+            search: searchTerm,
+            sort: "name"
+        })
+    });
+
+    const filtered = await response.json(); //JS Menerima hasil yang sudah diolah oleh Python//
+
+    //JS menampilkan data baru ke HTML//
+    const container = document.getElementById("gallery-grid");
+    container.innerHTML = "";
+
+    let found = false;
+    filtered.forEach(item => {
+        if (activeFilter === "semua" || item.category === activeFilter) {
+            const temp = document.createElement("div");
+            temp.innerHTML = item.html;
+            container.appendChild(temp.firstChild);
+            found = true;
+        }
+    });
+
+    if (!found) {
+        const msg = document.createElement("p");
+        msg.textContent = "Tidak ada hasil yang ditemukan.";
+        msg.style.textAlign = "center";
+        msg.style.marginTop = "2rem";
+        msg.style.color = "#777";
+        container.appendChild(msg);
+    }
+}
+
+// Inisialisasi saat halaman siap
+document.addEventListener("DOMContentLoaded", () => {
+    initKaryaData();         // Simpan semua data awal
+    filterAndSortKarya();    // Render pertama kali
+
+    // Event pencarian
+    document.getElementById("gallerySearchInput").addEventListener("input", filterAndSortKarya);
+
+    // Event filter tombol
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            document.querySelector(".filter-btn.active")?.classList.remove("active");
+            btn.classList.add("active");
+            filterAndSortKarya();
+        });
+    });
+});
+</script>
+
+    </div>
+
+                <!-- Demo Content -->
+    <div class="demo-content">
+     
+    </div>
+
+    <!-- Chat Bubble Button -->
+    <div class="chat-bubble" id="chatBubble">
+        <img src="../img/zyrruidle.png" alt="AI Assistant">
+    </div>
+
+    <!-- Chat Popup -->
+    <div class="chat-popup" id="chatPopup">
+        <!-- Close Button -->
+        <button class="close-btn" id="closeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+
+        <!-- AI Avatar at Top Center -->
+        <div class="chat-avatar">
+            <img src="../img/zyrrusmile.png" alt="AI Assistant">
+            <div class="chat-avatar-info">
+                <h3>Zyrru</h3>
+                <div class="status">● Online</div>
+            </div>
+        </div>
+
+        <!-- Chat Content -->
+        <div class="chat-content">
+            <!-- Header (Blue Line) -->
+            <div class="chat-header"></div>
+
+            <!-- Messages -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="message ai">
+                    <div class="message-bubble">
+                        Halo! Aku Zyrru. Apa ada yang bisa kubantu?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input -->
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Ketik pesan Anda...">
+                <button class="send-btn" id="sendBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const chatBubble = document.getElementById('chatBubble');
+        const chatPopup = document.getElementById('chatPopup');
+        const closeBtn = document.getElementById('closeBtn');
+        const sendBtn = document.getElementById('sendBtn');
+        const chatInput = document.getElementById('chatInput');
+        const chatMessages = document.getElementById('chatMessages');
+
+        // Open chat
+        chatBubble.addEventListener('click', () => {
+            chatPopup.classList.add('active');
+            chatBubble.classList.add('hidden');
+            chatInput.focus();
+        });
+
+        // Close chat
+        closeBtn.addEventListener('click', () => {
+            chatPopup.classList.remove('active');
+            chatBubble.classList.remove('hidden');
+        });
+
+        // Send message
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (message === '') return;
+
+            // Add user message
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user';
+            userMessage.innerHTML = `<div class="message-bubble">${message}</div>`;
+            chatMessages.appendChild(userMessage);
+
+            // Clear input
+            chatInput.value = '';
+
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // Simulate AI response
+            setTimeout(() => {
+                const aiMessage = document.createElement('div');
+                aiMessage.className = 'message ai';
+                aiMessage.innerHTML = `<div class="message-bubble">Hai! Aku Zyrru, siap membantu Anda!</div>`;
+                chatMessages.appendChild(aiMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+        }
+
+        // Send on button click
+        sendBtn.addEventListener('click', sendMessage);
+
+        // Send on Enter key
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Tentang HIMASIVERSE</h4>
+                <p>Platform digital Himpunan Mahasiswa Sistem Informasi untuk berbagi informasi, berkolaborasi, dan berinovasi.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak Organisasi</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Kesambi No.202, Drajat, Kec. Kesambi, Kota Cirebon, Jawa Barat 45133</p>
+                <p><i class="fas fa-envelope"></i> hima.si@cic.ac.id</p>
+            </div>
+            <div class="footer-col">
+                <h4>Media Sosial</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> himasi_ucic</a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i> HIMASI UCIC</a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i> himasi.ucic</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HIMASIVERSE. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- ========================================================== -->
+</body>
+</html>

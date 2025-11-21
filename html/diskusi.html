@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIMASIVERSE - Forum Diskusi</title>
+  <script>
+(function() {
+  try {
+    var theme = localStorage.getItem('theme');
+    if (theme === 'light') document.body.classList.add('light-mode');
+    var sidebar = localStorage.getItem('sidebar');
+    if (sidebar === 'close') {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('sidebar')?.classList.add('close');
+      });
+    }
+  } catch(e){}
+})();
+</script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="text/javascript" src="../js/app.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="../img/Himasi.jpeg">
+</head>
+<body>
+
+    <!-- ======================= HEADER ======================= -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="../img/Himasi.jpeg" alt="Logo HIMASIVERSE" class="logo-img">
+                <span class="logo-text">HIMASIVERSE</span>
+            </div>
+            <nav class="header-nav">
+                <a href="#forum-diskusi">Forum Diskusi</a>
+                <a href="#topik-populer">Topik Populer</a>
+                <a href="#tautan-terkait">Tautan Terkait</a>
+                <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i> <i class="fas fa-sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <!-- ========================================================== -->
+
+    <!-- Wrapper untuk konten -->
+    <div class="body-wrapper">
+        <!-- Sidebar Navigation (Struktur tidak diubah) -->
+        <nav id="sidebar">
+            <ul>
+                <li class="sidebar-header">
+                    <img src="../img/Febri.JPG" alt="Foto Profil" class="profile-pic">
+                    <div class="profile-info">
+                        <span class="profile-name">Febri Putra</span>
+                        <span class="profile-role">Anggota PNI - Mahasiswa</span>
+                    </div>
+                    <button id="toggle-btn">
+                        <!-- Ikon akan diisi oleh JavaScript -->
+                    </button>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pengumuman.html">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Pengumuman</span>
+                    </a>
+                <li>
+                    <a href="proker.html">
+                        <i class="fas fa-rocket"></i>
+                        <span>Program Kerja</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="prestasi-karya.html">
+                        <i class="fas fa-trophy"></i>
+                        <span>Prestasi & Karya</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="diskusi.html">
+                        <i class="fas fa-comments"></i>
+                        <span>Forum Diskusi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="kalender.html">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Kalender</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Profil</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="discussion-main" id="forum-diskusi">
+            <div class="discussion-container">
+                <div class="discussion-feed">
+                    <!-- Kotak untuk membuat pertanyaan baru -->
+                    <div class="ask-question-box card">
+                        <div class="ask-question-header">
+                            <img src="../img/Febri.JPG" alt="Foto Profil" class="profile-pic-small">
+                            <input type="text" placeholder="Apa yang ingin Anda tanyakan atau bagikan?">
+                        </div>
+                        <div class="ask-question-actions">
+                            <button class="action-btn"><i class="fas fa-question-circle"></i> Tanya</button>
+                            <button class="action-btn"><i class="fas fa-pen-alt"></i> Jawab</button>
+                            <button class="action-btn primary-btn"><i class="fas fa-plus-circle"></i> Buat Postingan</button>
+                        </div>
+                    </div>
+
+                    <!-- Thread Diskusi 1 -->
+                    <div class="thread-card card">
+                        <div class="thread-header">
+                            <img src="../img/Shalom.JPG" alt="Avatar" class="profile-pic-small" loading="lazy">
+                            <div class="thread-author-info">
+                                <span class="thread-author-name">Shalom Christviona</span>
+                                <span class="thread-author-role">Dewan Penasehat • 2 jam lalu</span>
+                            </div>
+                        </div>
+                        <div class="thread-content">
+                            <h3 class="thread-title">Bagaimana prospek karir di bidang Data Science untuk 5 tahun ke depan?</h3>
+                            <p class="thread-body">Melihat perkembangan AI dan machine learning yang sangat pesat, saya penasaran bagaimana pandangan teman-teman mahasiswa mengenai jenjang karir di bidang Data Science. Apakah akan semakin banyak dibutuhkan, atau justru beberapa perannya akan terotomatisasi?</p>
+                        </div>
+                        <div class="thread-footer">
+                            <button class="thread-action-btn"><i class="fas fa-arrow-up"></i> Upvote (12)</button>
+                            <button class="thread-action-btn"><i class="fas fa-comment"></i> Jawab (3)</button>
+                            <button class="thread-action-btn"><i class="fas fa-share-alt"></i> Bagikan</button>
+                        </div>
+                    </div>
+
+                    <!-- Thread Diskusi 2 -->
+                    <div class="thread-card card">
+                        <div class="thread-header">
+                            <img src="../img/Fernando.JPG" alt="Avatar" class="profile-pic-small" loading="lazy">
+                            <div class="thread-author-info">
+                                <span class="thread-author-name">Fernando Valentino</span>
+                                <span class="thread-author-role">Mahasiswa Angkatan 2022 • 5 jam lalu</span>
+                            </div>
+                        </div>
+                        <div class="thread-content">
+                            <h3 class="thread-title">Rekomendasi framework JavaScript terbaik untuk pemula selain React?</h3>
+                            <p class="thread-body">Saya sedang belajar pengembangan web dan sudah cukup familiar dengan dasar-dasar JavaScript. Banyak yang menyarankan React, tapi saya ingin mencoba framework lain yang lebih ringan dan mudah dipelajari untuk proyek-proyek kecil. Ada saran? Mungkin Vue.js atau Svelte?</p>
+                        </div>
+                        <div class="thread-footer">
+                            <button class="thread-action-btn"><i class="fas fa-arrow-up"></i> Upvote (8)</button>
+                            <button class="thread-action-btn"><i class="fas fa-comment"></i> Jawab (5)</button>
+                            <button class="thread-action-btn"><i class="fas fa-share-alt"></i> Bagikan</button>
+                        </div>
+                    </div>
+                    
+                     <!-- Thread Diskusi 3 -->
+                    <div class="thread-card card">
+                        <div class="thread-header">
+                            <img src="../img/Ade.JPG" alt="Avatar" class="profile-pic-small" loading="lazy">
+                            <div class="thread-author-info">
+                                <span class="thread-author-name">Ade Silva</span>
+                                <span class="thread-author-role">Wakil Ketua Umum • 1 hari lalu</span>
+                            </div>
+                        </div>
+                        <div class="thread-content">
+                            <h3 class="thread-title">Info Magang Merdeka Batch 8 sudah dibuka!</h3>
+                            <p class="thread-body">Teman-teman, pendaftaran program Magang & Studi Independen Bersertifikat (MSIB) Batch 8 sudah resmi dibuka. Jangan sampai ketinggalan! Mari kita diskusikan di sini perusahaan mana saja yang menjadi incaran kalian dan tips untuk lolos seleksi administrasi.</p>
+                        </div>
+                        <div class="thread-footer">
+                            <button class="thread-action-btn"><i class="fas fa-arrow-up"></i> Upvote (25)</button>
+                            <button class="thread-action-btn"><i class="fas fa-comment"></i> Jawab (11)</button>
+                            <button class="thread-action-btn"><i class="fas fa-share-alt"></i> Bagikan</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Kolom Kanan: Topik Populer -->
+                <aside class="discussion-sidebar">
+                    <div class="popular-topics card" id="topik-populer">
+                        <h4 class="sidebar-title">Topik Populer</h4>
+                        <ul>
+                            <li><a href="#">#Karir</a></li>
+                            <li><a href="#">#JavaScript</a></li>
+                            <li><a href="#">#DataScience</a></li>
+                            <li><a href="#">#MagangMerdeka</a></li>
+                            <li><a href="#">#UIUX</a></li>
+                            <li><a href="#">#LowonganKerja</a></li>
+                            <li><a href="#">#Python</a></li>
+                        </ul>
+                    </div>
+                     <div class="related-links card" id="tautan-terkait">
+                        <h4 class="sidebar-title">Tautan Terkait</h4>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-book"></i> Panduan Kurikulum SI</a></li>
+                            <li><a href="#"><i class="fas fa-calendar-alt"></i> Kalender Akademik</a></li>
+                            <li><a href="#"><i class="fas fa-file-alt"></i> Template Laporan KP</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+
+                <!-- Demo Content -->
+    <div class="demo-content">
+     
+    </div>
+
+    <!-- Chat Bubble Button -->
+    <div class="chat-bubble" id="chatBubble">
+        <img src="../img/zyrruidle.png" alt="AI Assistant">
+    </div>
+
+    <!-- Chat Popup -->
+    <div class="chat-popup" id="chatPopup">
+        <!-- Close Button -->
+        <button class="close-btn" id="closeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+
+        <!-- AI Avatar at Top Center -->
+        <div class="chat-avatar">
+            <img src="../img/zyrrusmile.png" alt="AI Assistant">
+            <div class="chat-avatar-info">
+                <h3>Zyrru</h3>
+                <div class="status">● Online</div>
+            </div>
+        </div>
+
+        <!-- Chat Content -->
+        <div class="chat-content">
+            <!-- Header (Blue Line) -->
+            <div class="chat-header"></div>
+
+            <!-- Messages -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="message ai">
+                    <div class="message-bubble">
+                        Halo! Aku Zyrru. Apa ada yang bisa kubantu?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input -->
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Ketik pesan Anda...">
+                <button class="send-btn" id="sendBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const chatBubble = document.getElementById('chatBubble');
+        const chatPopup = document.getElementById('chatPopup');
+        const closeBtn = document.getElementById('closeBtn');
+        const sendBtn = document.getElementById('sendBtn');
+        const chatInput = document.getElementById('chatInput');
+        const chatMessages = document.getElementById('chatMessages');
+
+        // Open chat
+        chatBubble.addEventListener('click', () => {
+            chatPopup.classList.add('active');
+            chatBubble.classList.add('hidden');
+            chatInput.focus();
+        });
+
+        // Close chat
+        closeBtn.addEventListener('click', () => {
+            chatPopup.classList.remove('active');
+            chatBubble.classList.remove('hidden');
+        });
+
+        // Send message
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (message === '') return;
+
+            // Add user message
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user';
+            userMessage.innerHTML = `<div class="message-bubble">${message}</div>`;
+            chatMessages.appendChild(userMessage);
+
+            // Clear input
+            chatInput.value = '';
+
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // Simulate AI response
+            setTimeout(() => {
+                const aiMessage = document.createElement('div');
+                aiMessage.className = 'message ai';
+                aiMessage.innerHTML = `<div class="message-bubble">Hai! Aku Zyrru, siap membantu Anda!</div>`;
+                chatMessages.appendChild(aiMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+        }
+
+        // Send on button click
+        sendBtn.addEventListener('click', sendMessage);
+
+        // Send on Enter key
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Tentang HIMASIVERSE</h4>
+                <p>Platform digital Himpunan Mahasiswa Sistem Informasi untuk berbagi informasi, berkolaborasi, dan berinovasi.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak Organisasi</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Kesambi No.202, Drajat, Kec. Kesambi, Kota Cirebon, Jawa Barat 45133</p>
+                <p><i class="fas fa-envelope"></i> hima.si@cic.ac.id</p>
+            </div>
+            <div class="footer-col">
+                <h4>Media Sosial</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> himasi_ucic</a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i> HIMASI UCIC</a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i> himasi.ucic</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HIMASIVERSE. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- ========================================================== -->
+
+</body>
+</html>

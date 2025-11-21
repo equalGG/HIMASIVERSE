@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIMASIVERSE - Pengumuman</title>
+  <script>
+(function() {
+  try {
+    var theme = localStorage.getItem('theme');
+    if (theme === 'light') document.body.classList.add('light-mode');
+    var sidebar = localStorage.getItem('sidebar');
+    if (sidebar === 'close') {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('sidebar')?.classList.add('close');
+      });
+    }
+  } catch(e){}
+})();
+</script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="text/javascript" src="../js/app.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="../img/Himasi.jpeg">
+</head>
+<body>
+
+    <!-- ======================= HEADER ======================= -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="../img/Himasi.jpeg" alt="Logo HIMASIVERSE" class="logo-img">
+                <span class="logo-text">HIMASIVERSE</span>
+            </div>
+            <nav class="header-nav">
+                <a href="#pengumuman">Pengumuman</a>
+                <a href="#acara-mendatang">Acara</a>
+                <a href="#berita-terbaru">Berita Terbaru</a>
+                <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i> <i class="fas fa-sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <!-- ========================================================== -->
+
+    <!-- Wrapper untuk konten -->
+    <div class="body-wrapper">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar">
+            <ul>
+                <li class="sidebar-header">
+                    <img src="../img/Febri.JPG" alt="Foto Profil" class="profile-pic">
+                    <div class="profile-info">
+                        <span class="profile-name">Febri Putra</span>
+                        <span class="profile-role">Anggota PNI - Mahasiswa</span>
+                    </div>
+                    <button id="toggle-btn">
+                        <!-- Ikon diisi oleh JavaScript -->
+                    </button>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="pengumuman.html">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Pengumuman</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="proker.html">
+                        <i class="fas fa-rocket"></i>
+                        <span>Program Kerja</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="prestasi-karya.html">
+                        <i class="fas fa-trophy"></i>
+                        <span>Prestasi & Karya</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="diskusi.html">
+                        <i class="fas fa-comments"></i>
+                        <span>Forum Diskusi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="kalender.html">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Kalender</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Profil</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+        <!-- End Sidebar Navigation -->
+
+        <!-- Main Content -->
+        <main>
+            <div class="pengumuman-page-header" id="pengumuman">
+                <h1>Pengumuman HIMASI</h1>
+                <p class="tagline">Informasi lengkap tentang Pengumuman Acara, dan Berita HIMASI</p>
+            </div>
+            <!-- ======= ACARA MENDATANG & BERITA TERBARU ======= -->
+            <section class="next-event-section" id="acara-mendatang">
+                <h1 class="section-title"><i class="fas fa-star"></i> Acara Mendatang</h1>
+                <div class="event-announcement">
+                    <div class="event-image">
+                        <img src="../img/sedinadatascience.jpg" alt="Banner Acara Utama" loading="lazy">
+
+                    </div>
+                    <div class="event-details">
+                        <h2>SEDINA NING UCIC: STEP UP TO THE NEW DATA SCIENCE</h2>
+                        <p class="event-meta">
+                            <span>🗓️ Tanggal: <strong>12 Juli 2025</strong></span>
+                            <span>⏰ Waktu: <strong>08:00 WIB - Selesai</strong></span>
+                            <span>📍 Lokasi: <strong>Auditorium Kampus 1 UCIC</strong></span>
+                        </p>
+                        <p class="event-description">
+                            Haii Sobat Sitizen! 👋
+                            Ada kabar super seru dari HIMASI UCIC buat kamu yang tertarik dengan dunia data dan teknologi! 🤩
+
+                            Kami mengundang kamu untuk hadir di acara keren banget:
+
+                            📊 Sedinaning UCIC 2025
+                            🎯 Step Up To The New Science Data 💻
+
+                            Sebuah event spesial untuk kamu yang ingin memperluas wawasan tentang data science, teknologi terbaru, serta memperluas jaringan pertemanan di lingkungan akademik dan profesional!.
+                        </p>
+                        <a href="#register" class="btn-register">Daftar Sekarang!</a>
+                    </div>
+                </div>
+            </section>
+            <section class="news-section" id="berita-terbaru">
+                <h2 class="section-title"><i class="fas fa-newspaper"></i> Berita Terbaru</h2>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <img src="../img/Stuban.jpg" alt="Gambar Berita 1" class="news-card-image" loading="lazy">
+                        <div class="news-card-content">
+                            <h3 class="news-card-title">Kolaborasi baru antar HIMASI UCIC dengan HIMASI UNJANI dan HIMASI UNIKOM</h3>
+                            <p class="news-card-description">Himpunan Mahasiswa Sistem Informasi Universitas Catur Insan Cendekia (HIMASI UCIC) menjalin kemitraan strategis dengan HIMASI Universitas Jenderal Achmad Yani (UNJANI) dan HIMASI Universitas Komputer Indonesia (UNIKOM) untuk mengembangkan solusi teknologi yang inovatif.</p>
+                            </p>
+                            <a href="#" class="read-more-link">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <img src="../img/Akreditasi.JPG" class="news-card-image" loading="lazy">
+                        <div class="news-card-content">
+                            <h3 class="news-card-title">Akreditasi "BAIK SEKALI" dari Program Studi Sistem Informasi UCIC</h3>
+                            <p class="news-card-description">Dengan penuh rasa bangga dan syukur, kami mengumumkan bahwa Program Studi S1 Sistem Informasi Universitas Catur Insan Cendekia telah resmi meraih akreditasi "BAIK SEKALI" dari Lembaga Akreditasi Mandiri Informatika dan Komputer (LAM INFOKOM).</p>
+                            <a href="#" class="read-more-link">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <img src="../img/MBKM.JPG" alt="Gambar Berita 3" class="news-card-image" loading="lazy">
+                        <div class="news-card-content">
+                            <h3 class="news-card-title">MBKM HIMASI mengembangkan UMKM daerah Karyamulya</h3>
+                            <p class="news-card-description">Pada tanggal 24 februari 2025, Mahasiswa/i Program Studi Sistem Informasi Universitas Catur Insan Cendekia mengadakan acara kegiatan sosial "MBKM KARYAMULYA" untuk mendukung UMKM di Kelurahan Karyamulya, Kota Cirebon.</p>
+                            <a href="#" class="read-more-link">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <img src="../img/HIFEST2022.png" alt="Gambar Berita 4" class="news-card-image" loading="lazy">
+                        <div class="news-card-content">
+                            <h3 class="news-card-title">Mahasiswa UCIC bikin HIFEST 2022, Ajang unjuk gigi Akademik hingga Mobile Legend </h3>
+                            <p class="news-card-description">Himpunan Mahasiswa Sistem Informasi (Himasi) Universitas Catur Insan Cendekia (UCIC) punya hajat keren. Kali ini, organisasi internal perguruan tinggi di Kota Cirebon itu menggelar Himasi Festival (HIFEST) 2022.</p>
+                            <a href="#" class="read-more-link">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <img src="../img/Kemas.png" alt="Gambar Berita 5" class="news-card-image" loading="lazy">
+                        <div class="news-card-content">
+                            <h3 class="news-card-title">Belajar KEMAS(Open Class)</h3>
+                            <p class="news-card-description">Program “KEMAS (Open Class)” adalah suatu
+                            kegiatan belajar bersama dengan berbagai
+                            materi 
+                            pemrograman untuk seluruh
+                            mahasiswa/i 
+                            program 
+                            Informasi. 
+                            studi 
+                            Sistem
+                            Program kerja ini akan
+                            dilaksanakan dengan bentuk belajar &
+                            mengajar oleh mahasiswa/i kembali untuk
+                            mahasiswa/i dari setiap tingkatan semester.</p>
+                            <a href="#" class="read-more-link">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <img src="../img/ckd.png" alt="Gambar Berita 6" class="news-card-image" loading="lazy">
+                        <div class="news-card-content">
+                            <h3 class="news-card-title">Cirebon Kartini Day 2024</h3>
+                            <p class="news-card-description"> Kegiatan Cirebon Kartini's Day
+                            merupakan perayaan yang diadakan
+                            untuk memperingati Hari Kartini, dengan
+                            tujuan menghormati dan memperingati
+                            jasa Raden Ajeng Kartini.</p>
+                            <a href="#" class="read-more-link">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <img src="../img/care.png" alt="Gambar Berita 7" class="news-card-image" loading="lazy">
+                        <div class="news-card-content">
+                            <h3 class="news-card-title">Peduli dengan masyarakat sosial HIMASI CARE</h3>
+                            <p class="news-card-description">Himasi Care merupakan inisiatif dari Pengurus Inti
+                            Himpunan Mahasiswa Sistem Informasi dan dibantu oleh
+                            donatur yang memiliki keinginan untuk memberikan
+                            kontribusi positif kepada masyarakat sekitar yang kurang
+                            mampu. Program ini fokus pada kegiatan berbagi nasi
+                            kotak sebagai bentuk kepedulian terhadap mereka yang
+                            membutuhkan</p>
+                            <a href="#" class="read-more-link">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <img src="../img/kurma.png" alt="Gambar Berita 8" class="news-card-image" loading="lazy">
+                        <div class="news-card-content">
+                            <h3 class="news-card-title">Kurma Kultum Ramadhan</h3>
+                            <p class="news-card-description">Kultum Ramadhan (KURMA) merupakan
+                            program spesial di bulan Ramadhan sebagai
+                            bentuk kepedulian terhadap kebutuhan
+                            rohaniah anggota HIMASI dan masyarakat
+                            Universitas Catur Insan Cendekia selama
+                            bulan Ramadhan.</p>
+                            <a href="#" class="read-more-link">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <img src="../img/sidak.png" alt="Gambar Berita 9" class="news-card-image" loading="lazy">
+                        <div class="news-card-content">
+                            <h3 class="news-card-title"> Spontan siap tidak siap SIDAK:Si Dadakan</h3>
+                            <p class="news-card-description"> Program kerja "SI Dadakan" (SIDAK) merupakan
+                            kegiatan konten interview dadakan yang bertujuan
+                            untuk memberikan gambaran tentang keseharian
+                            mahasiswa Program Studi Sistem Informasi (SI) di
+                            Universitas Catur Insan Cendekia.</p>
+                            <a href="#" class="read-more-link">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <!-- End Main Content -->
+    </div>
+    <!-- End Wrapper -->
+
+                <!-- Demo Content -->
+    <div class="demo-content">
+     
+    </div>
+
+    <!-- Chat Bubble Button -->
+    <div class="chat-bubble" id="chatBubble">
+        <img src="../img/zyrruidle.png" alt="AI Assistant">
+    </div>
+
+    <!-- Chat Popup -->
+    <div class="chat-popup" id="chatPopup">
+        <!-- Close Button -->
+        <button class="close-btn" id="closeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+
+        <!-- AI Avatar at Top Center -->
+        <div class="chat-avatar">
+            <img src="../img/zyrrusmile.png" alt="AI Assistant">
+            <div class="chat-avatar-info">
+                <h3>Zyrru</h3>
+                <div class="status">● Online</div>
+            </div>
+        </div>
+
+        <!-- Chat Content -->
+        <div class="chat-content">
+            <!-- Header (Blue Line) -->
+            <div class="chat-header"></div>
+
+            <!-- Messages -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="message ai">
+                    <div class="message-bubble">
+                        Halo! Aku Zyrru. Apa ada yang bisa kubantu?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input -->
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Ketik pesan Anda...">
+                <button class="send-btn" id="sendBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const chatBubble = document.getElementById('chatBubble');
+        const chatPopup = document.getElementById('chatPopup');
+        const closeBtn = document.getElementById('closeBtn');
+        const sendBtn = document.getElementById('sendBtn');
+        const chatInput = document.getElementById('chatInput');
+        const chatMessages = document.getElementById('chatMessages');
+
+        // Open chat
+        chatBubble.addEventListener('click', () => {
+            chatPopup.classList.add('active');
+            chatBubble.classList.add('hidden');
+            chatInput.focus();
+        });
+
+        // Close chat
+        closeBtn.addEventListener('click', () => {
+            chatPopup.classList.remove('active');
+            chatBubble.classList.remove('hidden');
+        });
+
+        // Send message
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (message === '') return;
+
+            // Add user message
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user';
+            userMessage.innerHTML = `<div class="message-bubble">${message}</div>`;
+            chatMessages.appendChild(userMessage);
+
+            // Clear input
+            chatInput.value = '';
+
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // Simulate AI response
+            setTimeout(() => {
+                const aiMessage = document.createElement('div');
+                aiMessage.className = 'message ai';
+                aiMessage.innerHTML = `<div class="message-bubble">Hai! Aku Zyrru, siap membantu Anda!</div>`;
+                chatMessages.appendChild(aiMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+        }
+
+        // Send on button click
+        sendBtn.addEventListener('click', sendMessage);
+
+        // Send on Enter key
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Tentang HIMASIVERSE</h4>
+                <p>Platform digital Himpunan Mahasiswa Sistem Informasi untuk berbagi informasi, berkolaborasi, dan berinovasi.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak Organisasi</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Kesambi No.202, Drajat, Kec. Kesambi, Kota Cirebon, Jawa Barat 45133</p>
+                <p><i class="fas fa-envelope"></i> hima.si@cic.ac.id</p>
+            </div>
+            <div class="footer-col">
+                <h4>Media Sosial</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> himasi_ucic</a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i> HIMASI UCIC</a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i> himasi.ucic</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HIMASIVERSE. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- ========================================================== -->
+
+</body>
+</html>
